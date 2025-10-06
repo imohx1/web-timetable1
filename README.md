@@ -136,7 +136,7 @@ footer {
         <th>المادة</th>
         <th>الوقت</th>
         <th>المدرس</th>
-        <th>المبنى والغرفة</th>
+        <th border="2">المبنى والغرفة </th>
       </tr>
     </thead>
     <tbody>
