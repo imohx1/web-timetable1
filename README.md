@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 
 <html lang="ar" dir="rtl">
 <head>
@@ -10,32 +10,13 @@
 </head>
 
 <body>
-  <header>جدول محمد الخزيم</header>
+  <header>
+    <h1>جدول محمد الخزيم</h1>
+  </header>
 
   <div class="container">
     <div class="info-box">
-      <h3>برمجة وتطوير الويب</h3>
-      <div class="current-time" id="current-time"></div>
-
-
-  <div class="stats-section">
-    <h4>إحصائيات الجدول</h4>
-    <div><span>إجمالي المحاضرات:</span> <span id="total-lectures">0</span></div>
-    <div><span>محاضرات ملغاة:</span> <span id="cancelled-lectures">0</span></div>
-    <div><span>عدد المواد:</span> <span id="unique-subjects">0</span></div>
-  </div>
-
-  <div class="current-lecture-info">
-    <h4>المحاضرة الحالية</h4>
-    <div id="lecture-status">لا توجد محاضرة حالياً</div>
-  </div>
-</div>
-
-<div class="table-container">
-  <div class="controls">
-    <button onclick="printTable()">طباعة الجدول</button>
-    <button onclick="toggleTheme()">تبديل الوضع</button>
-  </div>
+      <h3>تخصص : برمجة وتطوير الويب</h3>
 
   <table id="schedule-table">
     <thead>
