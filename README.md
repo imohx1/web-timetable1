@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
@@ -5,117 +7,6 @@
   <title>جدول محمد الخزيم</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: 'Cairo', sans-serif;
-      background-color: #121212;
-      color: #e0e0e0;
-      margin: 0;
-      padding: 0;
-      direction: rtl;
-    }
-
-
-header {
-  background-color: #1e1e1e;
-  color: #ffffff;
-  text-align: center;
-  padding: 20px;
-  border-bottom: 2px solid #444;
-}
-
-h1 {
-  margin: 0;
-  font-size: 26px;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px;
-}
-
-.info-box {
-  background-color: #1c1c1c;
-  padding: 20px;
-  border-radius: 10px;
-  width: 95%;
-  max-width: 900px;
-  box-shadow: 0 0 10px #00000077;
-}
-
-.info-box h3 {
-  text-align: center;
-  color: #ccc;
-  margin-bottom: 20px;
-}
-
-/* تنسيق الجدول */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-  background-color: #1a1a1a;
-  border: 1px solid #444;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-th, td {
-  border: 1px solid #333;
-  padding: 12px;
-  text-align: center;
-  font-size: 15px;
-}
-
-th {
-  background-color: #222;
-  color: #fff;
-  font-weight: 600;
-  border-bottom: 2px solid #555;
-}
-
-tr:nth-child(even) {
-  background-color: #181818;
-}
-
-tr:hover {
-  background-color: #2a2a2a;
-  transition: 0.2s;
-}
-
-/* الخلايا المشطوبة */
-.cancelled {
-  text-decoration: line-through;
-  color: #999;
-}
-
-footer {
-  text-align: center;
-  color: #888;
-  border-top: 1px solid #333;
-  margin-top: 25px;
-  padding-top: 10px;
-  font-size: 14px;
-}
-
-@media (max-width: 768px) {
-  th, td {
-    font-size: 12px;
-    padding: 8px;
-  }
-  h1 {
-    font-size: 20px;
-  }
-  .info-box h3 {
-    font-size: 16px;
-  }
-}
-
-
-  </style>
 </head>
 
 <body>
@@ -126,6 +17,7 @@ footer {
   <div class="container">
     <div class="info-box">
       <h3>تخصص : برمجة وتطوير الويب</h3>
+
 
   <table id="schedule-table">
     <thead>
@@ -140,31 +32,26 @@ footer {
     <tbody>
       <tr><td>الأحد</td><td class="cancelled">اللغة الإنجليزية (-لايوجد محاضرة-)</td><td>07:30 ص - 09:10 ص</td><td>خالد الجفن</td><td>مبنى 01 / 1040120114</td></tr>
       <tr><td>الأحد</td><td>هندسة البرمجيات</td><td>11:01 ص - 01:30 م</td><td>بدر الشويع</td><td>مبنى 02 / 1040220114</td></tr>
-
-
-  <tr><td>الاثنين</td><td>مبادئ برمجة صفحات الإنترنت</td><td>07:30 ص - 10:50 ص</td><td>محمد الحربي</td><td>مبنى 02 / 1040220101</td></tr>
-  <tr><td>الاثنين</td><td>مبادئ قواعد البيانات</td><td>11:01 ص - 12:40 م</td><td>خالد البليهي</td><td>مبنى 02 / 1040220110</td></tr>
-
-  <tr><td>الثلاثاء</td><td>أساسيات برمجة الحاسب</td><td>07:30 ص - 09:10 ص</td><td>خالد البليهي</td><td>مبنى 02 / 1040220108</td></tr>
-  <tr><td>الثلاثاء</td><td>مبادئ قواعد البيانات</td><td>09:20 ص - 11:00 ص</td><td>خالد البليهي</td><td>مبنى 02 / 1040220109</td></tr>
-  <tr><td>الثلاثاء</td><td>مبادئ برمجة صفحات الإنترنت</td><td>11:01 ص - 12:40 م</td><td>محمد الحربي</td><td>مبنى 02 / 1040220101</td></tr>
-  <tr><td>الثلاثاء</td><td class="cancelled">تطبيقات الحاسب المتقدمة (دراسة ذاتية)</td><td>04:30 م - 06:10 م</td><td>نايف الأسطاء</td><td>مبنى 01 / 1040110112</td></tr>
-
-  <tr><td>الأربعاء</td><td>أساسيات برمجة الحاسب</td><td>07:30 ص - 10:50 ص</td><td>خالد البليهي</td><td>مبنى 02 / 1040230110</td></tr>
-  <tr><td>الأربعاء</td><td>أساسيات ريادة الأعمال</td><td>11:01 ص - 12:41 م</td><td>فارس الحربي</td><td>مبنى 01 / 1040110101</td></tr>
-  <tr><td>الأربعاء</td><td class="cancelled">تطبيقات الحاسب المتقدمة (دراسة ذاتية)</td><td>04:30 م - 06:10 م</td><td>نايف الأسطاء</td><td>مبنى 01 / 1040110112</td></tr>
-
-  <tr><td>الخميس</td><td class="cancelled">اللغة الإنجليزية (2)</td><td>07:30 ص - 09:10 ص</td><td>خالد الجفن</td><td>مبنى 01 / 1040130114</td></tr>
-  <tr><td>الخميس</td><td>الكتابة الفنية</td><td>09:20 ص - 11:00 ص</td><td>يوسف الحفير</td><td>مبنى 01 / 1040130114</td></tr>
-</tbody>
-```
-
+      <tr><td>الاثنين</td><td>مبادئ برمجة صفحات الإنترنت</td><td>07:30 ص - 10:50 ص</td><td>محمد الحربي</td><td>مبنى 02 / 1040220101</td></tr>
+      <tr><td>الاثنين</td><td>مبادئ قواعد البيانات</td><td>11:01 ص - 12:40 م</td><td>خالد البليهي</td><td>مبنى 02 / 1040220110</td></tr>
+      <tr><td>الثلاثاء</td><td>أساسيات برمجة الحاسب</td><td>07:30 ص - 09:10 ص</td><td>خالد البليهي</td><td>مبنى 02 / 1040220108</td></tr>
+      <tr><td>الثلاثاء</td><td>مبادئ قواعد البيانات</td><td>09:20 ص - 11:00 ص</td><td>خالد البليهي</td><td>مبنى 02 / 1040220109</td></tr>
+      <tr><td>الثلاثاء</td><td>مبادئ برمجة صفحات الإنترنت</td><td>11:01 ص - 12:40 م</td><td>محمد الحربي</td><td>مبنى 02 / 1040220101</td></tr>
+      <tr><td>الثلاثاء</td><td class="cancelled">تطبيقات الحاسب المتقدمة (دراسة ذاتية)</td><td>04:30 م - 06:10 م</td><td>نايف الأسطاء</td><td>مبنى 01 / 1040110112</td></tr>
+      <tr><td>الأربعاء</td><td>أساسيات برمجة الحاسب</td><td>07:30 ص - 10:50 ص</td><td>خالد البليهي</td><td>مبنى 02 / 1040230110</td></tr>
+      <tr><td>الأربعاء</td><td>أساسيات ريادة الأعمال</td><td>11:01 ص - 12:41 م</td><td>فارس الحربي</td><td>مبنى 01 / 1040110101</td></tr>
+      <tr><td>الأربعاء</td><td class="cancelled">تطبيقات الحاسب المتقدمة (دراسة ذاتية)</td><td>04:30 م - 06:10 م</td><td>نايف الأسطاء</td><td>مبنى 01 / 1040110112</td></tr>
+      <tr><td>الخميس</td><td class="cancelled">اللغة الإنجليزية (2)</td><td>07:30 ص - 09:10 ص</td><td>خالد الجفن</td><td>مبنى 01 / 1040130114</td></tr>
+      <tr><td>الخميس</td><td>الكتابة الفنية</td><td>09:20 ص - 11:00 ص</td><td>يوسف الحفير</td><td>مبنى 01 / 1040130114</td></tr>
+    </tbody>
   </table>
 
   <footer>
     <p>© 2025 جميع الحقوق محفوظة - قسم برمجة وتطوير الويب</p>
   </footer>
 </div>
-</div>
+```
+
+  </div>
 </body>
 </html>
