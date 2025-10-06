@@ -18,7 +18,7 @@
     <div class="info-box">
       <h3>تخصص : برمجة وتطوير الويب</h3>
 
-  <table id="schedule-table">
+  <table id="schedule-table" border="2">
     <thead>
       <tr>
         <th>اليوم</th>
