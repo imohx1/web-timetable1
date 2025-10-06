@@ -7,6 +7,116 @@
   <title>جدول محمد الخزيم</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+
+
+header {
+  background-color: #f0f0f0;
+  color: #000000;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 2px solid #ccc;
+}
+
+h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.info-box {
+  background-color: #fafafa;
+  padding: 20px;
+  border-radius: 10px;
+  width: 95%;
+  max-width: 900px;
+  box-shadow: 0 0 10px #ddd;
+}
+
+.info-box h3 {
+  text-align: center;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+  font-size: 15px;
+  color: #000000;
+}
+
+th {
+  background-color: #f2f2f2;
+  color: #000000;
+  font-weight: 600;
+  border-bottom: 2px solid #bbb;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #eaeaea;
+  transition: 0.2s;
+}
+
+.cancelled {
+  text-decoration: line-through;
+  color: #888;
+}
+
+footer {
+  text-align: center;
+  color: #555;
+  border-top: 1px solid #ccc;
+  margin-top: 25px;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  th, td {
+    font-size: 12px;
+    padding: 8px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .info-box h3 {
+    font-size: 16px;
+  }
+}
+
+
+  </style>
 </head>
 
 <body>
