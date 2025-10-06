@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>جدول المواد الدراسية - برمجة وتطوير الويب</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Cairo", sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
+    header {
+      text-align: center;
+      background-color: #111;
+      color: white;
+      padding: 12px 0;
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 25px 40px;
+      box-sizing: border-box;
+      width: 100%;
+    }
+    .info-box {
+      width: 220px;
+      background-color: #f7f7f7;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .info-box h3 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #222;
+    }
+    .table-container {
+      flex: 1;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 11px;
+      margin-bottom: 20px;
+      border: 2px solid #343434;
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 6px 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #333;
+      color: white;
+      font-weight: 600;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    tr:hover {
+      background-color: #e4e4e4;
+    }
+    footer {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 13px;
+      color: #111;
+    }
+  </style>
+</head>
+<body>
+  <script src="main.js"></script>
+
+  <header>برمجة وتطوير الويب</header>
+
+  <div class="container">
+    <div class="info-box">
+      <h3>نصائح دراسية 💡</h3>
+      <ul>
+        <li>راجع دروسك أولاً بأول.</li>
+        <li>نَم جيداً قبل المحاضرات الصباحية.</li>
+        <li>احرص على المشاركة مع زملائك.</li>
+        <li>استخدم تقنيات المذاكرة النشطة.</li>
+        <li>وازن بين الدراسة والراحة.</li>
+      </ul>
+    </div>
+
+    <div class="table-container">
+      <table>
+        <tr>
+          <th>اليوم</th>
+          <th>المادة</th>
+          <th>الوقت</th>
+          <th>المدرس</th>
+          <th>المبنى و الغرفة</th>
+        </tr>
+
+        <!-- الأحد -->
+        <tr><td>الأحد</td><td>اللغة الإنجليزية (-لايوجد محاضرة-)</td><td>07:30 ص - 09:10 ص</td><td>خالد الجفن</td><td>مبنى 01 / 1040120114</td></tr>
+        <tr><td>الأحد</td><td>هندسة البرمجيات</td><td>11:01 ص - 11:50 ص</td><td>بدر الشويع</td><td>مبنى 02 / 1040220114</td></tr>
+        <tr><td>الأحد</td><td>هندسة البرمجيات </td><td>11:51 ص - 01:30 م</td><td>بدر الشويع</td><td>مبنى 02 / 1040220114</td></tr>
+
+        <!-- الاثنين -->
+        <tr><td>الاثنين</td><td>مبادئ برمجة صفحات الإنترنت</td><td>07:30 ص - 10:50 ص</td><td>محمد الحربي</td><td>مبنى 02 / 1040220101</td></tr>
+        <tr><td>الاثنين</td><td>مبادئ قواعد البيانات</td><td>11:01 ص - 12:40 م</td><td>خالد البليهي</td><td>مبنى 02 / 1040220110</td></tr>
+
+        <!-- الثلاثاء -->
+        <tr><td>الثلاثاء</td><td>أساسيات برمجة الحاسب</td><td>07:30 ص - 09:10 ص</td><td>خالد البليهي</td><td>مبنى 02 / 1040220108</td></tr>
+        <tr><td>الثلاثاء</td><td>مبادئ قواعد البيانات </td><td>09:20 ص - 11:00 ص</td><td>خالد البليهي</td><td>مبنى 02 / 1040220109</td></tr>
+        <tr><td>الثلاثاء</td><td>مبادئ برمجة صفحات الإنترنت </td><td>11:01 ص - 12:40 م</td><td>محمد الحربي</td><td>مبنى 02 / 1040220101</td></tr>
+        <tr><td>الثلاثاء</td><td>تطبيقات الحاسب المتقدمة</td><td>04:30 م - 06:10 م</td><td>نايف الأسطاء</td><td>مبنى 01 / 1040110112</td></tr>
+
+        <!-- الأربعاء -->
+        <tr><td>الأربعاء</td><td>أساسيات برمجة الحاسب</td><td>07:30 ص - 10:50 ص</td><td>خالد البليهي</td><td>مبنى 02 / 1040230110</td></tr>
+        <tr><td>الأربعاء</td><td>أساسيات ريادة الأعمال</td><td>11:01 ص - 12:41 م</td><td>فارس الحربي</td><td>مبنى 01 / 1040110101</td></tr>
+        <tr><td>الأربعاء</td><td>تطبيقات الحاسب المتقدمة (-لايوجد محاضرة-)</td><td>04:30 م - 06:10 م</td><td>نايف الأسطاء</td><td>مبنى 01 / 1040110112</td></tr>
+
+        <!-- الخميس -->
+        <tr><td>الخميس</td><td>اللغة الإنجليزية (2)</td><td>07:30 ص - 09:10 ص</td><td>خالد الجفن</td><td>مبنى 01 / 1040130114</td></tr>
+        <tr><td>الخميس</td><td>الكتابة الفنية</td><td>09:20 ص - 11:00 ص</td><td>يوسف الحفير</td><td>مبنى 01 / 1040130114</td></tr>
+      </table>
+
+      <footer>
+        <p>© 2025 جميع الحقوق محفوظة - قسم برمجة وتطوير الويب</p>
+      </footer>
+    </div>
+  </div>
+
+  <!-- كود تغيير لون الصفوف التي تحتوي على "لايوجد محاضرة" -->
+  <script>
+    const rows = document.querySelectorAll("table tr");
+
+    rows.forEach(row => {
+      if (row.textContent.includes("لايوجد محاضرة")) {
+        row.style.backgroundColor = "#ffe5e5"; // خلفية وردية فاتحة
+        row.style.color = "#b30000"; // نص أحمر داكن
+        row.style.fontWeight = "bold";
+      }
+    });
+  </script>
+
+</body>
+</html>

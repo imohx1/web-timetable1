@@ -1,0 +1,558 @@
+body {
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+  background-color: #fff;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.owner-title {
+  text-align: center;
+  background: linear-gradient(135deg, #222, #333);
+  color: white;
+  padding: 10px;
+  margin: -15px -15px 15px -15px;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 10px 10px 0 0;
+}
+
+/* الوضع الليلي */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+body.dark-mode .owner-title {
+  background: linear-gradient(135deg, #111, #222);
+}
+
+body.dark-mode header {
+  background-color: #000;
+}
+
+body.dark-mode table {
+  border-color: #555;
+}
+
+body.dark-mode th {
+  background-color: #000;
+}
+
+body.dark-mode tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode tr:hover {
+  background-color: #3a3a3a;
+}
+
+body.dark-mode .info-box {
+  background: linear-gradient(135deg, #222, #333);
+  border-color: #444;
+}
+
+body.dark-mode .current-time,
+body.dark-mode .stats-section,
+body.dark-mode .current-lecture-info {
+  background: linear-gradient(135deg, #333, #444);
+  border-color: #555;
+}
+
+header {
+  text-align: center;
+  background-color: #111;
+  color: white;
+  padding: 12px 0;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 25px 40px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.info-box {
+  width: 220px;
+  background: linear-gradient(135deg, #333, #444);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #555;
+  font-size: 14px;
+  line-height: 1.7;
+  color: white;
+  box-shadow: 0 4px 15px rgba(51, 51, 51, 0.3);
+}
+
+/* عرض التاريخ والوقت الحالي */
+.current-time {
+  background: linear-gradient(135deg, #444, #555);
+  padding: 10px;
+  border-radius: 8px;
+  margin: 15px 0;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  border: 1px solid #666;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* إحصائيات الجدول */
+.stats-section {
+  margin: 15px 0;
+  padding: 10px;
+  background: linear-gradient(135deg, #444, #555);
+  border-radius: 8px;
+  border: 1px solid #666;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.stats-section h4 {
+  margin: 0 0 10px 0;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  font-size: 13px;
+  color: #ddd;
+}
+
+.stat-item span:last-child {
+  font-weight: bold;
+  color: white;
+}
+
+/* المحاضرة الحالية */
+.current-lecture-info {
+  margin: 15px 0;
+  padding: 10px;
+  background: linear-gradient(135deg, #444, #555);
+  border-radius: 8px;
+  border: 1px solid #666;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.current-lecture-info h4 {
+  margin: 0 0 10px 0;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.current-lecture-info.active {
+  background: linear-gradient(135deg, #2d5a2d, #3d6b3d);
+  border-color: #4caf50;
+}
+
+.current-lecture-info.active h4 {
+  color: #a5d6a7;
+}
+
+#lecture-status {
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ddd;
+}
+
+.current-lecture-info.active #lecture-status {
+  color: #c8e6c9;
+}
+
+/* أزرار التحكم */
+.controls {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.controls button {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Cairo', sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
+  position: relative;
+  overflow: hidden;
+  min-width: 120px;
+}
+
+.controls button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.controls button:hover::before {
+  left: 100%;
+}
+
+.controls button:hover {
+  background: linear-gradient(135deg, #34495e, #2c3e50);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(44, 62, 80, 0.4);
+}
+
+.controls button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(44, 62, 80, 0.3);
+}
+
+/* أزرار مخصصة لكل وظيفة - بنفس لون صف اليوم */
+.controls button:nth-child(1) {
+  background: linear-gradient(135deg, #333, #444);
+  box-shadow: 0 4px 15px rgba(51, 51, 51, 0.3);
+}
+
+.controls button:nth-child(1):hover {
+  background: linear-gradient(135deg, #444, #555);
+  box-shadow: 0 6px 20px rgba(51, 51, 51, 0.4);
+}
+
+.controls button:nth-child(2) {
+  background: linear-gradient(135deg, #333, #444);
+  box-shadow: 0 4px 15px rgba(51, 51, 51, 0.3);
+}
+
+.controls button:nth-child(2):hover {
+  background: linear-gradient(135deg, #444, #555);
+  box-shadow: 0 6px 20px rgba(51, 51, 51, 0.4);
+}
+
+.controls button:nth-child(3) {
+  background: linear-gradient(135deg, #333, #444);
+  box-shadow: 0 4px 15px rgba(51, 51, 51, 0.3);
+}
+
+.controls button:nth-child(3):hover {
+  background: linear-gradient(135deg, #444, #555);
+  box-shadow: 0 6px 20px rgba(51, 51, 51, 0.4);
+}
+
+/* أيقونات للأزرار */
+.controls button:nth-child(1)::after {
+  content: '🖨️';
+  margin-right: 8px;
+}
+
+.controls button:nth-child(2)::after {
+  content: '🌙';
+  margin-right: 8px;
+}
+
+.controls button:nth-child(3)::after {
+  content: '🔍';
+  margin-right: 8px;
+}
+
+/* الوضع الليلي للأزرار */
+body.dark-mode .controls button:nth-child(2)::after {
+  content: '☀️';
+}
+
+.table-container {
+  flex: 1;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 11px;
+  margin-bottom: 20px;
+  border: 2px solid #343434;
+}
+
+th, td {
+  border: 1px solid #333;
+  padding: 6px 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #333;
+  color: white;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e4e4e4;
+  transition: background-color 0.2s ease;
+}
+
+/* تمييز المحاضرة الحالية */
+tr.current-lecture {
+  background-color: #e3f2fd !important;
+  border: 2px solid #2196f3;
+  animation: pulse 2s infinite;
+}
+
+/* تمييز المحاضرات الملغاة */
+tr.cancelled-lecture {
+  background-color: #ffebee !important;
+  color: #c62828;
+  font-weight: bold;
+}
+
+tr.cancelled-lecture td:nth-child(2) {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+
+footer {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 13px;
+  color: #111;
+}
+
+/* الرسوم المتحركة */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(33, 150, 243, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(33, 150, 243, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(33, 150, 243, 0);
+  }
+}
+
+/* التصميم المتجاوب - تحسين دعم الجوال */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: row;
+    padding: 15px;
+    gap: 15px;
+  }
+  
+  .info-box {
+    width: 200px;
+    margin-bottom: 0;
+  }
+  
+  table {
+    font-size: 11px;
+  }
+  
+  th, td {
+    padding: 5px 7px;
+  }
+  
+  .controls {
+    gap: 10px;
+  }
+  
+  .controls button {
+    padding: 10px 15px;
+    font-size: 12px;
+    min-width: 100px;
+    border-radius: 20px;
+  }
+  
+  .small-info-section {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+  }
+  
+  .info-card {
+    padding: 12px;
+  }
+  
+  .info-icon {
+    font-size: 20px;
+  }
+  
+  .info-content h5 {
+    font-size: 13px;
+  }
+  
+  .info-content p {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    font-size: 16px;
+    padding: 8px 0;
+  }
+  
+  .container {
+    flex-direction: column;
+    padding: 8px;
+    gap: 10px;
+  }
+  
+  .info-box {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  table {
+    font-size: 9px;
+  }
+  
+  th, td {
+    padding: 3px 4px;
+  }
+  
+  .controls {
+    flex-direction: row;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .controls button {
+    padding: 8px 12px;
+    font-size: 11px;
+    min-width: 90px;
+    border-radius: 15px;
+  }
+  
+  .small-info-section {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 8px;
+  }
+  
+  .info-card {
+    padding: 10px;
+    flex-direction: row;
+    text-align: right;
+    gap: 8px;
+  }
+  
+  .info-icon {
+    font-size: 16px;
+  }
+  
+  .info-content h5 {
+    font-size: 11px;
+  }
+  
+  .info-content p {
+    font-size: 10px;
+  }
+}
+
+/* قسم الأشياء الصغيرة المفيدة */
+.small-info-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.info-card {
+  background: linear-gradient(135deg, #333, #444);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #555;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 3px 10px rgba(51, 51, 51, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(51, 51, 51, 0.3);
+}
+
+.info-icon {
+  font-size: 24px;
+  min-width: 30px;
+  text-align: center;
+}
+
+.info-content {
+  flex: 1;
+}
+
+.info-content h5 {
+  margin: 0 0 5px 0;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.info-content p {
+  margin: 0;
+  color: #ddd;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* الوضع الليلي للأشياء الصغيرة */
+body.dark-mode .info-card {
+  background: linear-gradient(135deg, #222, #333);
+  border-color: #444;
+}
+
+body.dark-mode .info-content h5 {
+  color: #fff;
+}
+
+body.dark-mode .info-content p {
+  color: #ccc;
+}
+
+/* تحسينات الطباعة */
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  .controls,
+  .small-info-section {
+    display: none;
+  }
+  
+  .info-box {
+    page-break-inside: avoid;
+  }
+  
+  table {
+    page-break-inside: auto;
+  }
+  
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+}
