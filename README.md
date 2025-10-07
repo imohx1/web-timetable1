@@ -1,167 +1,146 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>جدول محمد الخزيم</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <style>
-    body {
-      font-family: 'Cairo', sans-serif;
-      background-color: #ffffff;
-      color: #000000;
-      margin: 0;
-      padding: 0;
-      direction: rtl;
+    /* ستايل بسيط لعرض الصفحة كما تظهر */
+    html,body{
+      height:100%;
+      margin:0;
+      padding:0;
+      font-family: "Segoe UI", "Tahoma", "Arial", sans-serif;
+      background:#ffffff;
+      color:#111;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
-
-
-header {
-  background-color: #f0f0f0;
-  color: #000000;
-  text-align: center;
-  padding: 20px;
-  border-bottom: 2px solid #ccc;
-}
-
-h1 {
-  margin: 0;
-  font-size: 26px;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px;
-}
-
-.info-box {
-  background-color: #fafafa;
-  padding: 20px;
-  border-radius: 10px;
-  width: 95%;
-  max-width: 900px;
-  box-shadow: 0 0 10px #ddd;
-}
-
-.info-box h3 {
-  text-align: center;
-  color: #000000;
-  margin-bottom: 20px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-  background-color: #ffffff;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-th, td {
-  border: 1px solid #ccc;
-  padding: 12px;
-  text-align: center;
-  font-size: 15px;
-  color: #000000;
-}
-
-th {
-  background-color: #f2f2f2;
-  color: #000000;
-  font-weight: 600;
-  border-bottom: 2px solid #bbb;
-}
-
-tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-tr:hover {
-  background-color: #eaeaea;
-  transition: 0.2s;
-}
-
-.cancelled {
-  text-decoration: line-through;
-  color: #888;
-}
-
-footer {
-  text-align: center;
-  color: #555;
-  border-top: 1px solid #ccc;
-  margin-top: 25px;
-  padding-top: 10px;
-  font-size: 14px;
-}
-
-@media (max-width: 768px) {
-  th, td {
-    font-size: 12px;
-    padding: 8px;
-  }
-  h1 {
-    font-size: 20px;
-  }
-  .info-box h3 {
-    font-size: 16px;
-  }
-}
-
-
+    .wrap{
+      max-width:900px;
+      margin:28px auto;
+      padding:22px;
+      box-sizing:border-box;
+    }
+    h1{
+      margin:0 0 6px 0;
+      font-size:28px;
+      font-weight:700;
+    }
+    .subtitle{
+      color:#555;
+      margin:0 0 18px 0;
+    }
+    .section{
+      margin:18px 0;
+      padding:12px 0;
+      border-top:1px solid #eee;
+    }
+    .section:first-of-type{ border-top:0; margin-top:0; padding-top:0; }
+    .grid{
+      display:block;
+      line-height:1.9;
+      white-space:pre-wrap;
+    }
+    .current{
+      margin-top:14px;
+      padding:12px;
+      background:#f7f7f7;
+      border-radius:6px;
+      border:1px solid #eee;
+    }
+    strong{ font-weight:600; }
+    /* اجعل الخط مليّناً للوقت الحالي إن احتجت لاحقًا */
+    @media (max-width:600px){
+      .wrap{ padding:14px; }
+      h1{ font-size:22px; }
+    }
   </style>
 </head>
-
 <body>
-  <header>
+  <div class="wrap">
     <h1>جدول محمد الخزيم</h1>
-  </header>
+    <div class="subtitle">تخصص: برمجة وتطوير الويب</div>
 
-  <div class="container">
-    <div class="info-box">
-      <h3>تخصص : برمجة وتطوير الويب</h3>
+    <div class="section">
+      <h2>## الجدول الكامل</h2>
+      <div class="grid">
+اليوم المادة الوقت المدرس المبنى والغرفة
 
+الأحد
 
-  <table id="schedule-table">
-    <thead>
-      <tr>
-        <th>اليوم</th>
-        <th>المادة</th>
-        <th>الوقت</th>
-        <th>المدرس</th>
-        <th border="2">المبنى والغرفة </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>الأحد</td><td class="cancelled">اللغة الإنجليزية (-لايوجد محاضرة-)</td><td class="cancelled">07:30 ص - 09:10 ص</td><td class="cancelled">خالد الجفن</td><td class="cancelled">مبنى 01 / 1040120114</td></tr>
-      <tr><td>الأحد</td><td>هندسة البرمجيات</td><td>11:01 ص - 01:30 م</td><td>بدر الشويع</td><td>مبنى 02 / 1040220114</td></tr>
-      <tr><td>الاثنين</td><td>مبادئ برمجة صفحات الإنترنت</td><td>07:30 ص - 10:50 ص</td><td>محمد الحربي</td><td>مبنى 02 / 1040220101</td></tr>
-      <tr><td>الاثنين</td><td>مبادئ قواعد البيانات</td><td>11:01 ص - 12:40 م</td><td>خالد البليهي</td><td>مبنى 02 / 1040220110</td></tr>
-      <tr><td>الثلاثاء</td><td>أساسيات برمجة الحاسب</td><td>07:30 ص - 09:10 ص</td><td>خالد البليهي</td><td>مبنى 02 / 1040220108</td></tr>
-      <tr><td>الثلاثاء</td><td>مبادئ قواعد البيانات</td><td>09:20 ص - 11:00 ص</td><td>خالد البليهي</td><td>مبنى 02 / 1040220109</td></tr>
-      <tr><td>الثلاثاء</td><td>مبادئ برمجة صفحات الإنترنت</td><td>11:01 ص - 12:40 م</td><td>محمد الحربي</td><td>مبنى 02 / 1040220101</td></tr>
-      <tr><td>الثلاثاء</td><td class="cancelled">تطبيقات الحاسب المتقدمة (دراسة ذاتية)</td><td class="cancelled">04:30 م - 06:10 م</td><td class="cancelled">نايف الأسطاء</td><td class="cancelled">مبنى 01 / 1040110112</td></tr>
-      <tr><td>الأربعاء</td><td>أساسيات برمجة الحاسب</td><td>07:30 ص - 10:50 ص</td><td>خالد البليهي</td><td>مبنى 02 / 1040230110</td></tr>
-      <tr><td>الأربعاء</td><td>أساسيات ريادة الأعمال</td><td>11:01 ص - 12:41 م</td><td>فارس الحربي</td><td>مبنى 01 / 1040110101</td></tr>
-      <tr><td>الأربعاء</td><td class="cancelled">تطبيقات الحاسب المتقدمة (دراسة ذاتية)</td><td class="cancelled">04:30 م - 06:10 م</td><td class="cancelled">نايف الأسطاء</td><td class="cancelled">مبنى 01 / 1040110112</td></tr>
-      <tr><td>الخميس</td><td>اللغة الإنجليزية (2)</td><td>07:30 ص - 09:10 ص</td><td>خالد الجفن</td><td>مبنى 01 / 1040130114</td></tr>
-      <tr><td>الخميس</td><td>الكتابة الفنية</td><td>09:20 ص - 11:00 ص</td><td>يوسف الحفير</td><td>مبنى 01 / 1040130114</td></tr>
-    </tbody>
-  </table>
+اللغة الإنجليزية
 
-  <footer>
-    <p>© 2025 جميع الحقوق محفوظة - قسم برمجة وتطوير الويب</p>
-  </footer>
-</div>
-```
+(-لايوجد محاضرة-)
 
+07:30 ص - 09:10 ص خالد الجفن مبنى 01 / 1040120114
+
+هندسة البرمجيات
+
+11:01 ص - 01:30 م بدر الشويع مبنى 02 / 1040220114
+
+الاثنين
+
+مبادئ برمجة صفحات الإنترنت
+
+07:30 ص - 10:50 ص محمد الحربي مبنى 02 / 1040220101
+
+مبادئ قواعد البيانات
+
+11:01 ص - 12:40 م خالد البليهي مبنى 02 / 1040220110
+
+الثلاثاء
+
+أساسيات برمجة الحاسب
+
+07:30 ص - 09:10 ص خالد البليهي مبنى 02 / 1040220108
+
+مبادئ قواعد البيانات
+09:20 ص - 11:00 ص خالد البليهي مبنى 02 / 1040220109
+
+مبادئ برمجة صفحات الإنترنت
+
+11:01 ص - 12:40 م محمد الحربي مبنى 02 / 1040220101
+
+تطبيقات الحاسب المتقدمة
+
+(دراسة ذاتية)
+
+04:30 م - 06:10 م نايف الأسطاء مبنى 01 / 1040110112
+
+الأربعاء
+
+أساسيات برمجة الحاسب
+
+07:30 ص - 10:50 ص خالد البليهي مبنى 02 / 1040230110
+
+أساسيات ريادة الأعمال
+
+11:01 ص - 12:41 م فارس الحربي مبنى 01 / 1040110101
+
+تطبيقات الحاسب المتقدمة
+
+(دراسة ذاتية)
+
+04:30 م - 06:10 م نايف الأسطاء مبنى 01 / 1040110112
+
+الخميس
+اللغة الإنجليزية (2)
+
+07:30 ص - 09:10 ص خالد الجفن مبنى 01 / 1040130114
+
+الكتابة الفنية
+
+09:20 ص - 11:00 ص يوسف الحفير مبنى 01 / 1040130114
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>## ⏰ المحاضرة الحالية</h2>
+      <div class="current">
+        لا توجد محاضرة في الوقت الحالي
+      </div>
+    </div>
   </div>
 </body>
 </html>
